@@ -5,7 +5,7 @@
 
 ## ***Nuestra Promesa***
 
-*En [git@github.com:DanielPerezMoralesDev13/Frameworks-Librerias-Modulos-Bibliotecas.git], nos comprometemos a crear y mantener un ambiente respetuoso y acogedor para todos, independientemente de su edad, tamaño, discapacidad, etnia, identidad y expresión de género, nivel de experiencia, educación, nivel socioeconómico, nacionalidad, apariencia personal, raza, religión o identidad y orientación sexual.*
+*En [Frameworks-Librerias-Modulos-Bibliotecas], nos comprometemos a crear y mantener un ambiente respetuoso y acogedor para todos, independientemente de su edad, tamaño, discapacidad, etnia, identidad y expresión de género, nivel de experiencia, educación, nivel socioeconómico, nacionalidad, apariencia personal, raza, religión o identidad y orientación sexual.*
 
 ## ***Nuestros Estándares***
 
