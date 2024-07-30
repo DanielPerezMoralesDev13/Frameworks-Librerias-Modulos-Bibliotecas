@@ -87,7 +87,7 @@ parser.add_argument(
     nargs = 1,                    # Número de argumentos esperados
     type = str,                   # Tipo de dato del argumento
     required = True,              # Argumento obligatorio
-    help = "Archivo de entrada",  # Descripción del argumento
+    help = "Fichero de entrada",  # Descripción del argumento
     metavar = "ARCHIVO"           # Nombre en la ayuda
 )
 
@@ -101,7 +101,7 @@ exit(0)
 
 #### ***3. `.print_help()`***
 
-*Este método imprime el mensaje de ayuda en el archivo especificado o en `stderr` por defecto.*
+*Este método imprime el mensaje de ayuda en el fichero especificado o en `stderr` por defecto.*
 
 **Ejemplo:**
 
@@ -116,7 +116,7 @@ from argparse import ArgumentParser
 from sys import stderr, exit
 
 parser: ArgumentParser = ArgumentParser(description = "Programa de ejemplo")
-parser.add_argument("-i", "--input", required = True, help = "Archivo de entrada")
+parser.add_argument("-i", "--input", required = True, help = "Fichero de entrada")
 parser.print_help(file = stderr)
 exit(1)
 ```
@@ -138,7 +138,7 @@ from argparse import ArgumentParser, Namespace
 from sys import stdout, exit
 
 parser: ArgumentParser = ArgumentParser(description = "Programa de ejemplo")
-parser.add_argument("-i", "--input", required = True, help = "Archivo de entrada")
+parser.add_argument("-i", "--input", required = True, help = "Fichero de entrada")
 args: Namespace = parser.parse_args()
 
 print(args.input, end = "\n", file = stdout)  # Imprime el valor del argumento --input

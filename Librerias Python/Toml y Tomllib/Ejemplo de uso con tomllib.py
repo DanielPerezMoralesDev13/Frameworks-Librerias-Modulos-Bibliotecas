@@ -10,17 +10,17 @@ from sys import stdout
 from tomllib import load # type: ignore
 from typing import Any, Dict, Optional
 
-# Ejemplo de cómo cargar un archivo TOML
-# Supongamos que tenemos un archivo llamado 'config.toml' con el siguiente contenido:
+# Ejemplo de cómo cargar un fichero TOML
+# Supongamos que tenemos un fichero llamado 'config.toml' con el siguiente contenido:
 # [settings]
 # theme = "dark"
 # version = 1.0
 
-# Abrimos y leemos el archivo TOML
+# Abrimos y leemos el fichero TOML
 f: Optional[BufferedReader] = None
 
 with open(file = r'config.toml', mode = 'rb') as f:
-    # Usamos tomllib.load para cargar el contenido del archivo en un diccionario
+    # Usamos tomllib.load para cargar el contenido del fichero en un diccionario
     config: Dict[str, Any] = load(f)
 
 # Imprimimos el contenido cargado

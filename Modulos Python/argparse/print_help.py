@@ -8,6 +8,6 @@ from argparse import ArgumentParser
 from sys import stderr, exit
 
 parser: ArgumentParser = ArgumentParser(description = "Programa de ejemplo")
-parser.add_argument("-i", "--input", required = True, help = "Archivo de entrada")
+parser.add_argument("-i", "--input", required = True, help = "Fichero de entrada")
 parser.print_help(file = stderr)
 exit(1)

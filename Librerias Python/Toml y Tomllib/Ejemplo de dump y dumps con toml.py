@@ -16,7 +16,7 @@ data: Dict[str, Dict[str, Union[str, float]]] = {
     }
 }
 
-# Ejemplo de cómo escribir el diccionario en un archivo TOML
+# Ejemplo de cómo escribir el diccionario en un fichero TOML
 f: Optional[TextIOWrapper] = None
 with open(file = r"new_config.toml", mode = "w") as f:
     dump(o = data, f = f)

@@ -9,13 +9,13 @@ from sys import stdout, exit
 from typing import Any, Dict
 from toml import load
 
-# Ejemplo de cómo cargar un archivo TOML
-# Supongamos que tenemos un archivo llamado 'config.toml' con el siguiente contenido:
+# Ejemplo de cómo cargar un fichero TOML
+# Supongamos que tenemos un fichero llamado 'config.toml' con el siguiente contenido:
 # [settings]
 # theme = "dark"
 # version = 1.0
 
-# Abrimos y leemos el archivo TOML
+# Abrimos y leemos el fichero TOML
 config: Dict[str, Any] = load(f = r"config.toml")
 
 # Imprimimos el contenido cargado

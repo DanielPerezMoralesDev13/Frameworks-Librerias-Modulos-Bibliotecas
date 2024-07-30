@@ -30,7 +30,7 @@ for row in data:
     # print(f"{dataColor}{' | '.join(map(str, row))}{reset}", end = "\n", file = stdout)
 
 """
-El error que ves se debe a que `mypy`, una herramienta de comprobación de tipos para Python, no puede encontrar información de tipos para el módulo `colored`. Cuando `mypy` analiza tu código, busca archivos de tipo (`.pyi`) o marcadores (`py.typed`) que proporcionen información sobre los tipos en módulos externos. Si no puede encontrar estos archivos o marcadores, emite un error como el que estás viendo.
+El error que ves se debe a que `mypy`, una herramienta de comprobación de tipos para Python, no puede encontrar información de tipos para el módulo `colored`. Cuando `mypy` analiza tu código, busca ficheros de tipo (`.pyi`) o marcadores (`py.typed`) que proporcionen información sobre los tipos en módulos externos. Si no puede encontrar estos ficheros o marcadores, emite un error como el que estás viendo.
 
 ### ¿Por qué añadir `# type: ignore`?
 
@@ -38,7 +38,7 @@ Añadir `# type: ignore` es una forma de decirle a `mypy` que ignore los errores
 
 ### Ejemplo de Problema
 
-En nuestro caso, `mypy` se queja de que no puede analizar el módulo `colored` porque falta información de tipos. Esto es común con algunas bibliotecas que no proporcionan sus propios archivos de tipo ni tienen una compatibilidad completa con `mypy`.
+En nuestro caso, `mypy` se queja de que no puede analizar el módulo `colored` porque falta información de tipos. Esto es común con algunas bibliotecas que no proporcionan sus propios ficheros de tipo ni tienen una compatibilidad completa con `mypy`.
 
 ### Cómo Resolver el Problema
 
@@ -50,11 +50,11 @@ from colored import fore, back, style  # type: ignore
 
 #### 2. **Proporcionar Información de Tipos Manualmente**
 
-Si quieres ser más específico, puedes crear un archivo de tipo personalizado para proporcionar información sobre los tipos de la biblioteca. Este es un enfoque más avanzado y generalmente se utiliza si el archivo de tipo existente no cubre todos los casos necesarios.
+Si quieres ser más específico, puedes crear un fichero de tipo personalizado para proporcionar información sobre los tipos de la biblioteca. Este es un enfoque más avanzado y generalmente se utiliza si el fichero de tipo existente no cubre todos los casos necesarios.
 
 #### 3. **Agregar una Configuración en `mypy.ini`**
 
-Puedes configurar `mypy` para ignorar los módulos sin tipo globalmente. Esto se hace en el archivo de configuración `mypy.ini`:
+Puedes configurar `mypy` para ignorar los módulos sin tipo globalmente. Esto se hace en el fichero de configuración `mypy.ini`:
 
 [mypy]
 ignore_missing_imports = True
@@ -103,7 +103,7 @@ exit(0)
 ### Recursos Adicionales
 
 - Consulta [la documentación de `mypy`](https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports) para obtener más detalles sobre cómo manejar módulos sin información de tipos.
-- Considera la posibilidad de contribuir con archivos de tipo para las bibliotecas que utilizas, si es posible.
+- Considera la posibilidad de contribuir con ficheros de tipo para las bibliotecas que utilizas, si es posible.
 
 En resumen, `# type: ignore` se usa para suprimir errores de tipo en líneas específicas donde `mypy` no puede encontrar la información de tipos necesaria. Es una solución rápida cuando se trabaja con bibliotecas que no están totalmente compatibles con las herramientas de verificación de tipos.
 """

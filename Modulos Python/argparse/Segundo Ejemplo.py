@@ -14,7 +14,7 @@ parser.add_argument(
     nargs = 1,                    # Número de argumentos esperados
     type = str,                   # Tipo de dato del argumento
     required = True,              # Argumento obligatorio
-    help = "Archivo de entrada",  # Descripción del argumento
+    help = "Fichero de entrada",  # Descripción del argumento
     metavar = "ARCHIVO"           # Nombre en la ayuda
 )
 

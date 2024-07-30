@@ -2,7 +2,7 @@
 <!-- GitHub: https://github.com/DanielPerezMoralesDev13 -->
 <!-- Email: danielperezdev@proton.me -->
 
-# ***`PyInstaller` es una herramienta popular para convertir aplicaciones Python en ejecutables independientes que se pueden ejecutar en sistemas sin necesidad de tener Python instalado. Es útil para distribuir aplicaciones Python como archivos ejecutables (.exe en Windows, binarios en Linux y macOS) que incluyen todas las dependencias necesarias.***
+# ***`PyInstaller` es una herramienta popular para convertir aplicaciones Python en ejecutables independientes que se pueden ejecutar en sistemas sin necesidad de tener Python instalado. Es útil para distribuir aplicaciones Python como ficheros ejecutables (.exe en Windows, binarios en Linux y macOS) que incluyen todas las dependencias necesarias.***
 
 ## ***Instalación de PyInstaller***
 
@@ -20,17 +20,17 @@ pip install pyinstaller
 pyinstaller nombre_del_script.py
 ```
 
-**Esto generará varios archivos y carpetas en el directorio, incluyendo:**
+**Esto generará varios ficheros y carpetas en el directorio, incluyendo:**
 
 - **`dist/`:** *Contiene el ejecutable generado.*
-- **`build/`:** *Contiene archivos temporales usados durante la construcción.*
-- **`nombre_del_script.spec`:** *Archivo de especificación que PyInstaller usa para recordar cómo construyó el ejecutable.*
+- **`build/`:** *Contiene ficheros temporales usados durante la construcción.*
+- **`nombre_del_script.spec`:** *Fichero de especificación que PyInstaller usa para recordar cómo construyó el ejecutable.*
 
 ### ***Opciones Comunes de PyInstaller***
 
 **Aquí hay algunas opciones útiles que puedes usar con `pyinstaller`:**
 
-- **`--onefile`:** *Genera un solo archivo ejecutable en lugar de una carpeta con múltiples archivos.*
+- **`--onefile`:** *Genera un solo fichero ejecutable en lugar de una carpeta con múltiples ficheros.*
 
     ```bash
     pyinstaller --onefile nombre_del_script.py
@@ -42,7 +42,7 @@ pyinstaller nombre_del_script.py
     pyinstaller --onefile --noconsole nombre_del_script.py
     ```
 
-- **`--add-data`:** *Incluye archivos adicionales o directorios en el ejecutable.*
+- **`--add-data`:** *Incluye ficheros adicionales o directorios en el ejecutable.*
 
     ```bash
     pyinstaller --onefile --add-data "SOURCE;DEST" nombre_del_script.py
@@ -70,7 +70,7 @@ pyinstaller --onefile --noconsole --icon=mi_icono.ico mi_script.py
 
 ### ***Especificación Avanzada con `.spec`***
 
-**`PyInstaller` genera un archivo `.spec` que puedes editar para personalizar el proceso de creación del ejecutable. Aquí hay un ejemplo de cómo se puede usar el archivo `.spec` para personalizar la construcción:**
+**`PyInstaller` genera un fichero `.spec` que puedes editar para personalizar el proceso de creación del ejecutable. Aquí hay un ejemplo de cómo se puede usar el fichero `.spec` para personalizar la construcción:**
 
 ```python
 # Author: Daniel Benjamin Perez Morales
@@ -110,7 +110,7 @@ exe = EXE(
 )
 ```
 
-**Puedes ejecutar el archivo `.spec` con:**
+**Puedes ejecutar el fichero `.spec` con:**
 
 ```bash
 pyinstaller mi_script.spec
@@ -118,17 +118,17 @@ pyinstaller mi_script.spec
 
 ### **Errores Comunes y Soluciones**
 
-- **Errores de Importación:** *Si `PyInstaller` no incluye algunas dependencias, puedes agregarlas manualmente usando `--hidden-import` o editando el archivo `.spec`.*
+- **Errores de Importación:** *Si `PyInstaller` no incluye algunas dependencias, puedes agregarlas manualmente usando `--hidden-import` o editando el fichero `.spec`.*
 
     ```bash
     pyinstaller --onefile --hidden-import=module_name nombre_del_script.py
     ```
 
-- **Archivos Faltantes:** *Usa `--add-data` para incluir archivos adicionales necesarios para la ejecución de tu aplicación.*
+- **Ficheros Faltantes:** *Usa `--add-data` para incluir ficheros adicionales necesarios para la ejecución de tu aplicación.*
 
 ### ***Documentación y Recursos***
 
 - **[Documentación Oficial de PyInstaller](https://pyinstaller.org/ "https://pyinstaller.org/"):** *Información detallada sobre cómo usar y configurar `PyInstaller`.*
 - **[Ejemplos y Tutoriales](https://pyinstaller.org/en/stable/usage.html "https://pyinstaller.org/en/stable/usage.html"):** *Ejemplos prácticos de uso de `PyInstaller`.*
 
-*En resumen, `PyInstaller` es una herramienta poderosa para crear ejecutables a partir de scripts Python, simplificando la distribución de aplicaciones y asegurando que todos los requisitos estén empaquetados en un solo archivo o en una carpeta organizada.*
+*En resumen, `PyInstaller` es una herramienta poderosa para crear ejecutables a partir de scripts Python, simplificando la distribución de aplicaciones y asegurando que todos los requisitos estén empaquetados en un solo fichero o en una carpeta organizada.*

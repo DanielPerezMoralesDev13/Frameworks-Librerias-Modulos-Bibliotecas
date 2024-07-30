@@ -30,7 +30,7 @@ touch pyproject.toml
 touch mypy.ini
 ```
 
-**`mypy` puede ser configurado a través de un archivo de configuración llamado `mypy.ini` o `pyproject.toml`. Aquí tienes un ejemplo básico de configuración en un archivo `mypy.ini`:**
+**`mypy` puede ser configurado a través de un fichero de configuración llamado `mypy.ini` o `pyproject.toml`. Aquí tienes un ejemplo básico de configuración en un fichero `mypy.ini`:**
 
 ```ini
 # Author: Daniel Benjamin Perez Morales
@@ -61,10 +61,10 @@ disallow_untyped_defs = true
 
 ### ***Uso Básico de `mypy`***
 
-**Para verificar un archivo Python con `mypy`, simplemente ejecuta:**
+**Para verificar un fichero Python con `mypy`, simplemente ejecuta:**
 
 ```bash
-mypy nombre_del_archivo.py
+mypy nombre_del_fichero.py
 ```
 
 ### ***Ejemplos de Análisis de Tipo con `mypy`***
@@ -157,13 +157,13 @@ def add(* , a: int, b: int) -> int:
 
 ### ***¿Qué Hace el Comando?***
 
-1. **Instalación de Stubs de Tipos:** *`mypy` puede utilizar archivos de tipos (conocidos como "type stubs") para proporcionar información de tipos para módulos que no tienen anotaciones de tipo nativas. Estos archivos tienen la extensión `.pyi` y permiten a `mypy` realizar una verificación de tipos para módulos de terceros.*
+1. **Instalación de Stubs de Tipos:** *`mypy` puede utilizar ficheros de tipos (conocidos como "type stubs") para proporcionar información de tipos para módulos que no tienen anotaciones de tipo nativas. Estos ficheros tienen la extensión `.pyi` y permiten a `mypy` realizar una verificación de tipos para módulos de terceros.*
 
-2. **Automatización:** *Al ejecutar `mypy --install-types`, `mypy` verificará los módulos importados en tu código y, si detecta que algún módulo necesita archivos de tipos adicionales que no están instalados, intentará instalar esos archivos automáticamente.*
+2. **Automatización:** *Al ejecutar `mypy --install-types`, `mypy` verificará los módulos importados en tu código y, si detecta que algún módulo necesita ficheros de tipos adicionales que no están instalados, intentará instalar esos ficheros automáticamente.*
 
 ### ***¿Cómo Funciona?***
 
-- **Verifica el Código:** *`mypy` analiza el código fuente de tu proyecto para identificar módulos que no tienen información de tipos o que podrían necesitar archivos de tipos adicionales.*
+- **Verifica el Código:** *`mypy` analiza el código fuente de tu proyecto para identificar módulos que no tienen información de tipos o que podrían necesitar ficheros de tipos adicionales.*
 
 - **Consulta y Descarga:** *Si `mypy` encuentra módulos que necesitan información de tipos y hay paquetes disponibles para esos módulos, descargará e instalará estos paquetes automáticamente desde el índice de paquetes de Python (PyPI).*
 

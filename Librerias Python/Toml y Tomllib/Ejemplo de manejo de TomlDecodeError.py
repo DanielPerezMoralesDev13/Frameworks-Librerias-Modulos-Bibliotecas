@@ -10,11 +10,11 @@ from toml import load
 from toml.decoder import TomlDecodeError
 
 try:
-    # Intentamos cargar un archivo TOML malformado
+    # Intentamos cargar un fichero TOML malformado
     config: Dict[str, Any] = load(f = r"malformed_config.toml")
 except TomlDecodeError as e:
     # Capturamos y mostramos el error de decodificación
-    print(f'Error al decodificar el archivo TOML: {e}', end = "\n", file = stderr)
+    print(f'Error al decodificar el fichero TOML: {e}', end = "\n", file = stderr)
     exit(1)
 
 print(config, end = "\n", file = stdout)

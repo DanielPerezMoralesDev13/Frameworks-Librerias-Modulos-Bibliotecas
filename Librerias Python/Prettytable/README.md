@@ -97,7 +97,7 @@ exit(0)
 
 #### ***Ejemplo 3: Mostrar la Tabla en Formato de deseado, agregando un título***
 
-**Puedes exportar la tabla en formato deseado, agregando un título para usarla en archivos README u otros documentos.**
+**Puedes exportar la tabla en formato deseado, agregando un título para usarla en ficheros README u otros documentos.**
 
 ```python
 #!/usr/bin/env python3
