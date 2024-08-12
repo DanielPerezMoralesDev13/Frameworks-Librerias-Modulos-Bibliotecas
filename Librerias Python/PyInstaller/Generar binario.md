@@ -17,23 +17,23 @@
 
 ```python
 # Ruta al Fichero principal del script
-scriptPath = "src/main.py"
+scriptPath = "./src/cli/main.py"
 ```
 
-*Define la ruta al Fichero principal del script que deseas convertir en un ejecutable. En este caso, `main.py` se encuentra en el directorio `src`.*
+*Define la ruta al Fichero principal del script que deseas convertir en un ejecutable. En este caso, `main.py` se encuentra en el directorio `./src/cli`.*
 
 ```python
 # Crea la variable de análisis
 a = Analysis([scriptPath],
-    pathex=["src"],
+    pathex=["./src"],
     binaries=[],
     datas=[
-        ("src/TemasClaros", "TemasClaros"),
-        ("src/TemasOscuros", "TemasOscuros"),
-        ("src/TemasRecomendados", "TemasRecomendados"),
-        ("src/cli", "cli"),
-        ("src/config", "config"),
-        ("src/lib", "lib"),
+        ("./src/TemasClaros", "TemasClaros"),
+        ("./src/TemasOscuros", "TemasOscuros"),
+        ("./src/TemasRecomendados", "TemasRecomendados"),
+        ("./src/cli", "cli"),
+        ("./src/config", "config"),
+        ("./src/lib", "lib"),
     ],
     hiddenimports=[],
     hookspath=[],
@@ -48,9 +48,9 @@ a = Analysis([scriptPath],
 ## ***Explicación de la Sección `Analysis`:***
 
 - **`[scriptPath]`:** *Una lista que contiene la ruta al Fichero principal del script. Aquí, se pasa `scriptPath` definido anteriormente.*
-- **`pathex=["src"]`:** *Lista de directorios que se añadirán a la ruta de búsqueda de PyInstaller. Aquí, se incluye el directorio `src`.*
+- **`pathex=["./src"]`:** *Lista de directorios que se añadirán a la ruta de búsqueda de PyInstaller. Aquí, se incluye el directorio `src`.*
 - **`binaries=[]`:** *Lista de Ficheros binarios adicionales que se deben incluir en el ejecutable.*
-- **`datas`:** *Lista de tuplas que especifican Ficheros de datos adicionales y sus ubicaciones en el ejecutable. Por ejemplo, `("src/TemasClaros", "TemasClaros")` significa que el directorio `src/TemasClaros` se incluirá en el ejecutable en una carpeta llamada `TemasClaros`.*
+- **`datas`:** *Lista de tuplas que especifican Ficheros de datos adicionales y sus ubicaciones en el ejecutable. Por ejemplo, `("./src/TemasClaros", "TemasClaros")` significa que el directorio `./src/TemasClaros` se incluirá en el ejecutable en una carpeta llamada `TemasClaros`.*
 - **`hiddenimports=[]`:** *Lista de módulos que no se detectan automáticamente pero que deben incluirse en el ejecutable.*
 - **`hookspath=[]`:** *Lista de directorios que contienen ganchos personalizados.*
 - **`hooksconfig={}`:** *Configuración de los ganchos.*
@@ -119,14 +119,14 @@ pyinstaller --onefile \
             --clean \
             --noconsole \
             --name pycrypy \
-            --paths src \
-            --add-data "src/TemasClaros:TemasClaros" \
-            --add-data "src/TemasOscuros:TemasOscuros" \
-            --add-data "src/TemasRecomendados:TemasRecomendados" \
-            --add-data "src/cli:cli" \
-            --add-data "src/config:config" \
-            --add-data "src/lib:lib" \
-            src/main.py
+            --paths ./src \
+            --add-data "./src/TemasClaros:TemasClaros" \
+            --add-data "./src/TemasOscuros:TemasOscuros" \
+            --add-data "./src/TemasRecomendados:TemasRecomendados" \
+            --add-data "./src/cli:cli" \
+            --add-data "./src/config:config" \
+            --add-data "./src/lib:lib" \
+            ./src/climain.py
 ```
 
 ### ***Explicación de cada opción***
@@ -136,13 +136,13 @@ pyinstaller --onefile \
 - **`--clean`:** *Limpia los Ficheros temporales de compilación.*
 - **`--noconsole`:** *No abre una ventana de consola al ejecutar el ejecutable (para aplicaciones GUI). Cambiar a `--console` si necesitas la consola.*
 - **`--name pycrypy`:** *Define el nombre del Fichero ejecutable resultante.*
-- **`--paths src`:** *Añade `src` a la ruta de búsqueda de PyInstaller.*
-- **`--add-data "src/TemasClaros:TemasClaros"`:** *Incluye la carpeta `src/TemasClaros` en el ejecutable y la mapea a `TemasClaros`.*
-- **`--add-data "src/TemasOscuros:TemasOscuros"`:** *Incluye la carpeta `src/TemasOscuros` en el ejecutable y la mapea a `TemasOscuros`.*
-- **`--add-data "src/TemasRecomendados:TemasRecomendados"`:** *Incluye la carpeta `src/TemasRecomendados` en el ejecutable y la mapea a `TemasRecomendados`.*
-- **`--add-data "src/cli:cli"`:** *Incluye la carpeta `src/cli` en el ejecutable y la mapea a `cli`.*
-- **`--add-data "src/config:config"`:** *Incluye la carpeta `src/config` en el ejecutable y la mapea a `config`.*
-- **`--add-data "src/lib:lib"`:** *Incluye la carpeta `src/lib` en el ejecutable y la mapea a `lib`.*
-- **`src/main.py`:** *Especifica el Fichero principal del script.*
+- **`--paths ./src`:** *Añade `./src` a la ruta de búsqueda de PyInstaller.*
+- **`--add-data "./src/TemasClaros:TemasClaros"`:** *Incluye la carpeta `./src/TemasClaros` en el ejecutable y la mapea a `TemasClaros`.*
+- **`--add-data "./src/TemasOscuros:TemasOscuros"`:** *Incluye la carpeta `./src/TemasOscuros` en el ejecutable y la mapea a `TemasOscuros`.*
+- **`--add-data "./src/TemasRecomendados:TemasRecomendados"`:** *Incluye la carpeta `./src/TemasRecomendados` en el ejecutable y la mapea a `TemasRecomendados`.*
+- **`--add-data "./src/cli:cli"`:** *Incluye la carpeta `./src/cli` en el ejecutable y la mapea a `cli`.*
+- **`--add-data "./src/config:config"`:** *Incluye la carpeta `./src/config` en el ejecutable y la mapea a `config`.*
+- **`--add-data "./src/lib:lib"`:** *Incluye la carpeta `./src/lib` en el ejecutable y la mapea a `lib`.*
+- **`./src/cli/main.py`:** *Especifica el Fichero principal del script.*
 
-*Este comando debería crear un único Fichero ejecutable que incluya todos los Ficheros de datos y recursos necesarios. Asegúrate de ejecutar este comando desde el directorio que contiene la carpeta `src`.*
+*Este comando debería crear un único Fichero ejecutable que incluya todos los Ficheros de datos y recursos necesarios. Asegúrate de ejecutar este comando desde el directorio que contiene la carpeta `./src`.*
