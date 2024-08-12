@@ -126,7 +126,7 @@ pyinstaller --onefile \
             --add-data "./src/cli:cli" \
             --add-data "./src/config:config" \
             --add-data "./src/lib:lib" \
-            ./src/climain.py
+            ./src/cli/main.py
 ```
 
 ### ***Explicación de cada opción***
