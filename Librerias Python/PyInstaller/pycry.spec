@@ -5,19 +5,19 @@
 # Email: danielperezdev@proton.me
 
 # Ruta al Fichero principal del script
-scriptPath = "src/main.py"
+scriptPath = "./src/main.py"
 
 # Crea la variable de análisis
 a = Analysis([scriptPath],
-    pathex=["src"],
+    pathex=["./src"],
     binaries=[],
     datas=[
-        ("src/TemasClaros", "TemasClaros"),
-        ("src/TemasOscuros", "TemasOscuros"),
-        ("src/TemasRecomendados", "TemasRecomendados"),
-        ("src/cli", "cli"),
-        ("src/config", "config"),
-        ("src/lib", "lib"),
+        ("./src/TemasClaros", "TemasClaros"),
+        ("./src/TemasOscuros", "TemasOscuros"),
+        ("./src/TemasRecomendados", "TemasRecomendados"),
+        ("./src/cli", "cli"),
+        ("./src/config", "config"),
+        ("./src/lib", "lib"),
     ],
     hiddenimports=[],
     hookspath=[],
